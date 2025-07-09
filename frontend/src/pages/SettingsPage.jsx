@@ -1,14 +1,19 @@
-import { THEMES } from "../constants/index.js";
+import { THEMES } from "../constants";
 import { useThemeStore } from "../store/useThemeStore";
 import { Send } from "lucide-react";
 
 const PREVIEW_MESSAGES = [
-	{ id: 1, content: "Hey!, Which is your favorite anime?", isSent: false },
-	{ id: 2, content: "I love gintama", isSent: true },
+	{ id: 1, content: "Hey! How's it going?", isSent: false },
+	{
+		id: 2,
+		content: "I'm doing great! Just working on some new features.",
+		isSent: true,
+	},
 ];
 
 const SettingsPage = () => {
 	const { theme, setTheme } = useThemeStore();
+
 	return (
 		<div className="h-screen container mx-auto px-4 pt-20 max-w-5xl">
 			<div className="space-y-6">
